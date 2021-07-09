@@ -1,4 +1,5 @@
 import { Constants } from '@/libs/util/index';
+import { xSet } from '@/libs/x-store';
 
 /**
  * @descript
@@ -8,6 +9,51 @@ import { Constants } from '@/libs/util/index';
  */
 
 export default class CommonsUtil {
+
+
+  /**
+   * 初始化网站信息
+   */
+  static initWebsiteInfo () {
+    const website = JSON.parse(localStorage.getItem(Constants.LOCAL_STORAGE.WEBSITE_INFO) || '{}');
+    if (!website.sitename) {
+      website.sitename = process.env.VUE_APP_WEBSITE_NAME || '';
+    }
+    this.setWebsiteInfo(website);
+    return website;
+  }
+
+  /**
+   * 修改网站信息
+   * @param website
+   * @param website.sitename
+   * @param website.logo
+   * @param website.ico
+   * @param website.theme
+   */
+  static setWebsiteInfo (website) {
+    if (website?.sitename) {
+      document.title = website.sitename;
+    }
+    // 修改网站ico文件
+    if (website?.ico) {
+      const ico = document.head.querySelector(('link[rel=icon]'));
+      ico.setAttribute('href', website?.ico);
+    }
+    // 修改主题
+    if (website?.theme) {
+      document.body.setAttribute('theme', website.theme || ''); // 设置主题
+    }
+    xSet('websiteInfo', website);
+  }
+
+
+  /**
+   * 获取网站信息
+   */
+  static getWebsiteInfo () {
+    return JSON.parse(localStorage.getItem(Constants.LOCAL_STORAGE.WEBSITE_INFO) || '{}');
+  }
 
   /**
    * 随机字符串
@@ -94,7 +140,7 @@ export default class CommonsUtil {
       CommonsUtil.throttleObjs[id] = null;
     }, timeout);
     return false;
-  };
+  }
 
   static intervalIds = {};
 

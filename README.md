@@ -2,48 +2,65 @@
 
 > element-ui basic, and user create components for that who will create a new project or exists project.
 
+## Run
+
+```shell
+# install
+yarn install
+# run
+yarn run serve
+```
+
 ## Project Menu
 
 ```text
 -[x]
     - home
-    - menu
-        - menu1 :redirect to menu1 sample page
-        - menu2 :redirect to menu2 sample page
-        ...
     - form
-        - todolist1
-        - todolist2
-        - dialog1
-        - dialog2
-        - date
+        - input
+        - textarea
+        - checkbox
+        - radio
+        - select
+        - cascade
+        - slider
+        - datepicker
+        - timepicker
+        - transfer
+        - tag
+    - data
+        - card-table 
+        - tabs
+        - breadcrumb
+        - steps
+        - carousel
+        - collapse
         - calendar
-        - 
-    - image
+        - todolist
+        - dialog
+        - drawer
+    - multiple
         - image-upload
         - image-crop
         - image-viewer
-    - video
         - video-player
-    - rich-text
-        - rich-text1
-        - rich-text2
-        ..
-    - pdf
-        - pdf-viewer
-    - office
+        - rich-text-editor
+        - pdf-reader
         - doc-viewer
         - excel-viewer
         - ppt-viewer
+        
 ```
 
-##  project dependence
+## project dependence
+
 - element-resize-detector
 - tailwindcss
     - style framework
         ```bash
           tailwindcss build src.css -o dist.css 
         ```
+
 ```shell script
 npm i -S axios md5 lodash echarts element-resize-detector element-ui tailwindcss jsonp vue-cropperjs@4.2.0
 npm i -D compression-webpack-plugin@6.0.3

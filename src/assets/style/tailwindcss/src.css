@@ -1,0 +1,4 @@
+/* @see https://www.tailwindcss.cn/docs/configuration */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

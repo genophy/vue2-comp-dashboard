@@ -1,38 +1,49 @@
 <!--
   FileDesc  :
-  webUrl    :
-  Author    : g_eno_phy (2021-07-06 19:27)
+  Author    : g_eno_phy
+  Date      : 2020-05-03 12:42
   Version   :
   Usage     :
     - template
-      <Home></Home>
+      <BaseModalHeader></BaseModalHeader>
+
     - props
+
     - event
+
     - method
 
 -->
 
 <template>
-  <div>Home</div>
+  <div class="b__modal-header">
+    <div class="title-wrapper">
+      <span class="title">{{title}}</span>
+    </div>
+    <div class="title-op">
+      <span class="btn-close" @close="handleClose">X</span>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name : 'Home',
-  props: {},
-  data () {
-    return {
-      isQuerying  : false,    // 是否正在查询
-      isSubmitting: false     // 是否正在提交
-    };
+  name    : 'BaseModalHeader',
+  props   : {
+    title      : {type: String},
+    isCloseAble: {type: Boolean, default: true}
+  },
+  data() {
+    return {};
   },
   computed: {},
-  watch   : {},
-  created () {},
-  mounted () {
+  created() {
   },
-  beforeDestroy () {},
-  methods: {
+  mounted() {
+  },
+  beforeDestroy() {
+  },
+  methods : {
     /* _____________________________________________________________________________________ */
     /* _____________________________________________________________________________________ */
     /* _____________________________________________________________________________________ */

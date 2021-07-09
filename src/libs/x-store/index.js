@@ -32,8 +32,10 @@ const debug = process.env.NODE_ENV !== 'production';
 // 默认值
 const states = [
   {windowSize: {width: document.documentElement.clientWidth, height: document.documentElement.clientHeight}},
+  {websiteInfo: {}},
   {menuList: []},
   {currentMenuPath: ''},
+  {showProgressLoader: false},
   {includeRouteList: []}
 ];
 

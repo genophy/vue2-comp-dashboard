@@ -1,0 +1,141 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "path": "/home",
+      "name": "首页",
+      "children": [
+      ]
+    },
+    {
+      "path": "/form",
+      "name": "表单",
+      "children": [
+        {
+          "path": "/form/input",
+          "name": "input"
+        }, {
+          "path": "/form/textarea",
+          "name": "textarea"
+        }, {
+          "path": "/form/checkbox",
+          "name": "checkbox"
+        }, {
+          "path": "/form/radio",
+          "name": "radio"
+        }, {
+          "path": "/form/select",
+          "name": "select"
+        }, {
+          "path": "/form/cascade",
+          "name": "cascade"
+        }, {
+          "path": "/form/slider",
+          "name": "slider"
+        }, {
+          "path": "/form/datepicker",
+          "name": "datepicker"
+        }, {
+          "path": "/form/timepicker",
+          "name": "timepicker"
+        }, {
+          "path": "/form/transfer",
+          "name": "transfer"
+        }, {
+          "path": "/form/tag",
+          "name": "tag"
+        }
+      ]
+    },
+    {
+      "path": "/data",
+      "name": "数据",
+      "children": [
+        {
+          "path": "/data/card-table",
+          "name": "card table"
+        }, {
+          "path": "/data/tabs",
+          "name": "tabs"
+        }, {
+          "path": "/data/breadcrumb",
+          "name": "breadcrumb"
+        }, {
+          "path": "/data/steps",
+          "name": "steps"
+        }, {
+          "path": "/data/carousel",
+          "name": "carousel"
+        }, {
+          "path": "/data/collapse",
+          "name": "collapse"
+        }, {
+          "path": "/data/calendar",
+          "name": "calendar"
+        }, {
+          "path": "/data/todolist",
+          "name": "todolist"
+        }, {
+          "path": "/data/dialog",
+          "name": "dialog"
+        }, {
+          "path": "/data/drawer",
+          "name": "drawer"
+        }
+      ]
+    },
+    {
+      "path": "/multiple",
+      "name": "多媒体",
+      "children": [
+        {
+          "path": "/multiple/image",
+          "name": "image",
+          "children": [
+            {
+              "path": "/multiple/image/image-upload",
+              "name": "image upload"
+            },
+            {
+              "path": "/multiple/image/image-crop",
+              "name": "image crop"
+            },
+            {
+              "path": "/multiple/image/image-viewer",
+              "name": "image viewer"
+            }
+          ]
+        },
+        {
+          "path": "/multiple/video-player",
+          "name": "video player"
+        },
+        {
+          "path": "/multiple/rich-text-editor",
+          "name": "rich-text editor"
+        },
+        {
+          "path": "/multiple/viewer",
+          "name": "multiple viewer",
+          "children": [
+            {
+              "path": "/multiple/viewer/pdf-viewer",
+              "name": "pdf viewer"
+            }, {
+              "path": "/multiple/viewer/doc-viewer",
+              "name": "doc viewer"
+            },
+            {
+              "path": "/multiple/viewer/excel-viewer",
+              "name": "excel viewer"
+            },
+            {
+              "path": "/multiple/viewer/ppt-viewer",
+              "name": "ppt viewer"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

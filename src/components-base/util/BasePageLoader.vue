@@ -1,11 +1,11 @@
 <!--
-  FileDesc  :
+  FileDesc  : 顶部进度动画
   webUrl    :
-  Author    : g_eno_phy (2021-07-06 19:27)
+  Author    : g_eno_phy (2020-06-29 09:45)
   Version   :
   Usage     :
     - template
-      <Home></Home>
+      <BasePageLoader></BasePageLoader>
     - props
     - event
     - method
@@ -13,26 +13,32 @@
 -->
 
 <template>
-  <div>Home</div>
+  <div class="b__page-loader">
+    <div v-show="showProgressLoader" class="progress"></div>
+  </div>
 </template>
 
 <script>
+import { xComputed } from '@/libs/x-store';
+
 export default {
-  name : 'Home',
-  props: {},
-  data () {
+  name    : 'BasePageLoader',
+  props   : {},
+  data() {
     return {
       isQuerying  : false,    // 是否正在查询
       isSubmitting: false     // 是否正在提交
     };
   },
-  computed: {},
-  watch   : {},
-  created () {},
-  mounted () {
+  computed: {
+    showProgressLoader: xComputed('showProgressLoader')
   },
-  beforeDestroy () {},
-  methods: {
+  watch   : {},
+  created() {},
+  mounted() {
+  },
+  beforeDestroy() {},
+  methods : {
     /* _____________________________________________________________________________________ */
     /* _____________________________________________________________________________________ */
     /* _____________________________________________________________________________________ */
@@ -61,4 +67,30 @@ export default {
     06.背景（background）
     07.其它样式(opacity,cursors,transform,...)
 */
+.b__page-loader {
+  position       : fixed;
+  top            : 0;
+  left           : 0;
+  width          : 100vw;
+  max-height     : 4px;
+  z-index        : 9999;
+  overflow       : hidden;
+  pointer-events : none;
+
+  .progress {
+    width            : 200vw;
+    height           : 4px;
+    background-image : linear-gradient(to right, #409eff, #fff, #409eff, #fff, #409eff);
+    animation        : p-anime 2s linear infinite;
+  }
+}
+
+@keyframes p-anime {
+  from {
+    transform : translateX(-50%);
+  }
+  to {
+    transform : translateX(0%);
+  }
+}
 </style>

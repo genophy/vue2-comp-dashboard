@@ -1,0 +1,48 @@
+/* 颜色透明度值： 0，4，8，12，16，24，40，64，80，92，100 */
+
+@font-title   : "Souce Han Sans CN Medium", '\5FAE\8F6F\96C5\9ED1', 'Microsoft YaHei', 'WenQuanYi Micro Hei Mono', 'Avenir', Helvetica, Arial, sans-serif;
+@font-content : "Souce Han Sans CN Regular", '\5FAE\8F6F\96C5\9ED1', 'Microsoft YaHei', 'WenQuanYi Micro Hei Mono', 'Avenir', Helvetica, Arial, sans-serif;
+@font-tip     : "Souce Han Sans CN Light", '\5FAE\8F6F\96C5\9ED1', 'Microsoft YaHei', 'WenQuanYi Micro Hei Mono', 'Avenir', Helvetica, Arial, sans-serif;
+@font-num     : "BebasNeue Regular", '\5FAE\8F6F\96C5\9ED1', 'Microsoft YaHei', 'WenQuanYi Micro Hei Mono', 'Avenir', Helvetica, Arial, sans-serif;
+
+
+:root {
+  --font-title        : @font-title;
+  --font-content      : @font-content;
+  --font-tip          : @font-tip;
+  --font-num          : @font-num;
+
+  --color-text        : #666;
+  --color-desc        : #999;
+  --color-border      : #e2e2e2;
+  --color-border-lite : fade(#fff, 24);
+  --color-dark        : #000;
+  --color-front       : #fff;
+  --color-front-sub   : fade(#fff, 64);
+  --color-bg          : #42b983;
+
+
+  body[theme=dark] {
+    --color-text        : #666;
+    --color-desc        : #999;
+    --color-border      : #e2e2e2;
+    --color-border-lite : fade(#fff, 24);
+    --color-dark        : #000;
+    --color-front       : #fff;
+    --color-front-sub   : fade(#fff, 64);
+    --color-bg          : #222;
+  }
+
+
+  body[theme=red] {
+    --color-text        : #666;
+    --color-desc        : #999;
+    --color-border      : #e2e2e2;
+    --color-border-lite : fade(#fff, 24);
+    --color-dark        : #000;
+    --color-front       : #fff;
+    --color-front-sub   : fade(#fff, 64);
+    --color-bg          : #b41414;
+  }
+}
+

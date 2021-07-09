@@ -17,12 +17,15 @@ Vue.use(VueRouter);
 const routes = [
   {
     path    : '/',
-    redirect: '/Home'
+    redirect: '/Main'
   },
   {
-    path     : '/home',
-    name     : 'Home',
-    component: () => import('@/views/Home.vue')
+    path     : '/main',
+    name     : 'Main',
+    component: () => import('@/views/main/Main'),
+    children : [
+      {path: '', name: 'Home', component: () => import('@/views/Home.vue')}
+    ]
   },
   {
     path    : '**',
